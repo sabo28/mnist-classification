@@ -7,7 +7,7 @@ from keras.datasets import mnist
 import os
 
 # Ordner für Ergebnisse anlegen
-os.makedirs("results", exist_ok=True)
+os.makedirs("results/svm", exist_ok=True)
 
 # 1. MNIST-Daten laden (60.000 Training, 10.000 Test)
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -37,7 +37,7 @@ report = metrics.classification_report(y_test, y_pred, digits=4)
 print(report)
 
 # Bericht auch speichern
-with open("results/metrics_svm.txt", "w") as f:
+with open("results/svm/metrics_svm.txt", "w") as f:
     f.write(report)
 
 # 7. Konfusionsmatrix erzeugen und als PNG speichern
@@ -45,5 +45,5 @@ conf_matrix = metrics.confusion_matrix(y_test, y_pred)
 disp = metrics.ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=range(10))
 disp.plot(cmap=plt.cm.Blues, xticks_rotation="vertical")
 plt.title("SVM – Confusion Matrix (MNIST-Subset)")
-plt.savefig("results/confusion_matrix_svm.png")
+plt.savefig("results/svm/confusion_matrix_svm.png")
 plt.show()
