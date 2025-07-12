@@ -1,0 +1,35 @@
+# 🐍 Python Bytecode / Cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+
+# 🧪 Virtuelle Umgebungen
+venv/
+.env
+.env.*
+
+# 📊 Ergebnisdaten (werden bei Ausführung erzeugt)
+results/
+*.csv
+*.npz
+*.h5
+*.pickle
+*.joblib
+
+# 🐳 Docker & Build Artefakte
+*.tar
+*.bak
+*.swp
+.dockerignore
+
+# 🧠 Jupyter (falls verwendet)
+.ipynb_checkpoints/
+*.ipynb
+
+# 💻 IDEs & Editoren
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

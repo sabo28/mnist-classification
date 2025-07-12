@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  svm:
+    build: .
+    command: python svm/svm_classifier.py
+    volumes:
+      - ./results/svm:/app/results/svm
+    container_name: svm_model
+
+  cnn:
+    build: .
+    command: python cnn/cnn_classifier.py
+    volumes:
+      - ./results/cnn:/app/results/cnn
+    container_name: cnn_model
