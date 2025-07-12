@@ -1,0 +1,17 @@
+# Verzeichnisse, die nicht ins Image sollen
+venv/
+__pycache__/
+results/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints
+
+# Temporäre Dateien / IDE-Dateien
+*.log
+*.tmp
+*.swp
+.DS_Store
+.env
+.idea/
+.vscode/

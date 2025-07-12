@@ -22,7 +22,6 @@ results/
 *.tar
 *.bak
 *.swp
-.dockerignore
 
 # 🧠 Jupyter (falls verwendet)
 .ipynb_checkpoints/
