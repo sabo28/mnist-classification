@@ -17,13 +17,14 @@ mnist-classification/
 │   └── cnn_classifier.py
 ├── svm/                      # SVM-Implementierung (Scikit-learn)
 │   └── svm_classifier.py
-├── results/                  # Ausgabeordner für Metriken & Visualisierungen
+├── results/                  # Ausgabeordner für Metriken & Visualisierungen wird bei Ausführung erzeugt
 │   ├── cnn/
 │   └── svm/
 ├── requirements.txt          # Python-Abhängigkeiten
 ├── Dockerfile                # Basisimage für beide Modelle
 ├── docker-compose.yml        # Separates Setup für svm / cnn
 ├── .gitignore
+├── .dockerignore
 └── README.md
 ```
 
