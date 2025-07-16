@@ -18,7 +18,7 @@ os.makedirs("results/svm", exist_ok=True)
 x_train = x_train.reshape((x_train.shape[0], -1)) / 255.0
 x_test = x_test.reshape((x_test.shape[0], -1)) / 255.0
 
-# 3. Modell erstellen und trainieren (RBF-Kernel mit kleiner Gamma)
+# 3. Modell erstellen und trainieren (RBF-Kernel mit kleinem Gamma)
 clf = svm.SVC(kernel='rbf', gamma=0.001)
 clf.fit(x_train, y_train)
 
