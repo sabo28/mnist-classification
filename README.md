@@ -98,4 +98,4 @@ Die Analyse, theoretischen Grundlagen und Auswertung der Ergebnisse sind vollstÃ
 ## ğŸ“ Lizenz
 
 - Code: MIT-Lizenz
-- MNIST-Datensatz: [CC BY-SA 3.0](http://yann.lecun.com/exdb/mnist/) (Yann LeCun et al.)
+- MNIST-Datensatz: [CC BY-SA 3.0](http://yann.lecun.com/) (Yann LeCun et al.)
