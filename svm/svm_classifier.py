@@ -18,21 +18,14 @@ os.makedirs("results/svm", exist_ok=True)
 x_train = x_train.reshape((x_train.shape[0], -1)) / 255.0
 x_test = x_test.reshape((x_test.shape[0], -1)) / 255.0
 
-# 3. Rechenzeit begrenzen (SVM ist langsam):
-#    Trainingsmenge auf 10.000, Testmenge auf 2.000 reduzieren
-#x_train_small = x_train[:10000]
-#y_train_small = y_train[:10000]
-#x_test_small = x_test[:2000]
-#y_test_small = y_test[:2000]
-
-# 4. Modell erstellen und trainieren (RBF-Kernel mit kleiner Gamma)
+# 3. Modell erstellen und trainieren (RBF-Kernel mit kleiner Gamma)
 clf = svm.SVC(kernel='rbf', gamma=0.001)
 clf.fit(x_train, y_train)
 
-# 5. Vorhersage auf Testdaten
+# 4. Vorhersage auf Testdaten
 y_pred = clf.predict(x_test)
 
-# 6. Evaluierung: Precision, Recall, F1
+# 5. Evaluierung: Precision, Recall, F1
 report = metrics.classification_report(y_test, y_pred, digits=4)
 print(report)
 
@@ -40,7 +33,7 @@ print(report)
 with open("results/svm/metrics_svm.txt", "w") as f:
     f.write(report)
 
-# 7. Konfusionsmatrix erzeugen und als PNG speichern
+# 6. Konfusionsmatrix erzeugen und als PNG speichern
 conf_matrix = metrics.confusion_matrix(y_test, y_pred)
 disp = metrics.ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=range(10))
 disp.plot(cmap=plt.cm.Blues, xticks_rotation="vertical")
